@@ -63,22 +63,7 @@
 								"type": "text"
 							}
 						],
-						"url": {
-							"raw": "{{base_url}}/api/users?page=2",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"api",
-								"users"
-							],
-							"query": [
-								{
-									"key": "page",
-									"value": "2"
-								}
-							]
-						}
+						"url": ""
 					},
 					"response": []
 				}
