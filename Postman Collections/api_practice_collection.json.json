@@ -44,6 +44,43 @@
 						"url": "google.com"
 					},
 					"response": []
+				},
+				{
+					"name": "ReqRes",
+					"id": "bac56592-9f44-4cbc-b10a-5e1a7697dce2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/users?page=2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "73f93db0-1556-4a98-9f95-5e3bbc3d0be8"
