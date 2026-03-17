@@ -7,6 +7,29 @@
 	},
 	"item": [
 		{
+			"name": "Google Collection",
+			"item": [
+				{
+					"name": "Get Google Homepage",
+					"id": "38765889-87d9-46cc-bd59-d92dd6c7c594",
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "google.com"
+					},
+					"response": []
+				}
+			],
+			"id": "73f93db0-1556-4a98-9f95-5e3bbc3d0be8"
+		},
+		{
 			"name": "Get data",
 			"event": [
 				{
