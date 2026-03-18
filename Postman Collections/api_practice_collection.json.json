@@ -93,7 +93,14 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": "{{base_url}}/api/users/3"
 					},
 					"response": []
 				},
@@ -123,6 +130,44 @@
 						"method": "GET",
 						"header": [],
 						"url": "{{base_url}}/api/users/23"
+					},
+					"response": []
+				},
+				{
+					"name": "List <source>",
+					"id": "efbaee48-f2c9-4090-90b6-44783ce8c512",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/api/unknown"
+					},
+					"response": []
+				},
+				{
+					"name": "Single <resource>",
+					"id": "96e82a4e-c77d-40cb-b97c-2ec889773d03",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/api/unknown/5"
+					},
+					"response": []
+				},
+				{
+					"name": "Single <resource> not found",
+					"id": "065012ca-5d12-4248-a407-28d6afb5a5d7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
 					},
 					"response": []
 				},
@@ -160,15 +205,14 @@
 					"response": []
 				},
 				{
-					"name": "List <source>",
-					"id": "efbaee48-f2c9-4090-90b6-44783ce8c512",
+					"name": "New Request",
+					"id": "63bd3dc0-9c87-47b0-a7f2-f8cfe107c3b1",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"method": "GET",
-						"header": [],
-						"url": "{{base_url}}/api/unknown"
+						"header": []
 					},
 					"response": []
 				}
