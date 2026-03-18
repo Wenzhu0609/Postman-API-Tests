@@ -44,10 +44,35 @@
 						"url": "google.com"
 					},
 					"response": []
-				},
+				}
+			],
+			"id": "73f93db0-1556-4a98-9f95-5e3bbc3d0be8"
+		},
+		{
+			"name": "ReqRes Collection",
+			"item": [
 				{
-					"name": "ReqRes",
-					"id": "bac56592-9f44-4cbc-b10a-5e1a7697dce2",
+					"name": "Delete Data from List Resource",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "11ca96ad-35c7-447e-a2ab-e71e211f77be",
+								"exec": [
+									"pm.test(\"ReqRes response to get request\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"ReqRes has a fast response time\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"id": "4c4a4917-ba13-4480-b951-9dddc29f65bc",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -55,7 +80,7 @@
 						"auth": {
 							"type": "noauth"
 						},
-						"method": "GET",
+						"method": "DELETE",
 						"header": [
 							{
 								"key": "x-api-key",
@@ -63,12 +88,12 @@
 								"type": "text"
 							}
 						],
-						"url": ""
+						"url": "{{base_url}}/api/unknown/5"
 					},
 					"response": []
 				}
 			],
-			"id": "73f93db0-1556-4a98-9f95-5e3bbc3d0be8"
+			"id": "4d230f34-a5bc-4e76-805f-b9986c927439"
 		},
 		{
 			"name": "Get data",
