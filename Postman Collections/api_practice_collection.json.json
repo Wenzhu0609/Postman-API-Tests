@@ -92,6 +92,53 @@
 						"url": "{{base_url}}/api/unknown/5"
 					},
 					"response": []
+				},
+				{
+					"name": "Get non-existing data from the user list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "56643c8f-ea88-41e5-a55a-a5a5d49598d2",
+								"exec": [
+									"pm.test(\"User 23 is not found\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"id": "85b3cac5-657d-492a-ac55-c60701dc1baf",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": "{{base_url}}/api/users/23"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "6ee84949-756d-4192-859d-3a5b27430753",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "4d230f34-a5bc-4e76-805f-b9986c927439"
