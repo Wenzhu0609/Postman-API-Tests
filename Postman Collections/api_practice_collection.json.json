@@ -229,13 +229,34 @@
 				},
 				{
 					"name": "Update user id 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "21b1aa2f-12ef-41b8-87cc-33729c5d0257",
+								"exec": [
+									"pm.test(\"Body contains updatedAt\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"updatedAT\");",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
 					"id": "9c1f2553-6f43-403b-a0fa-0be2aed196cc",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"morpheus\", \"job\": \"zion resident\"}"
+						},
+						"url": "{{base_url}}/api/users/3"
 					},
 					"response": []
 				}
