@@ -238,11 +238,8 @@
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
 									"});",
-									"pm.test(\"Body contains updatedAt\", function () {",
-									"    pm.expect(pm.response.text()).to.include(\"updatedAt\");",
-									"});",
 									"pm.test(\"Response has updatedAt property - Object check\", function () {",
-									"    var jsonData = pm.response.json();",
+									"    const jsonData = pm.response.json();",
 									"    pm.expect(jsonData).to.have.property('updatedAt');",
 									"});"
 								],
