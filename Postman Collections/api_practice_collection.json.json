@@ -154,5 +154,38 @@
 			},
 			"response": []
 		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": {
+			"value": "{{api_key}}",
+			"key": "x-api-key"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "0db3b464-5b88-41c7-9062-13f72e6b33c4",
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "de212422-43cf-4540-bf1d-3ee5ff61b953",
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
 	]
 }
