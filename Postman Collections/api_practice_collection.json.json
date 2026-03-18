@@ -52,6 +52,40 @@
 			"name": "ReqRes Collection",
 			"item": [
 				{
+					"name": "List users on page 1",
+					"id": "6ee84949-756d-4192-859d-3a5b27430753",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/users?page=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Delete Data from List Resource",
 					"event": [
 						{
@@ -110,18 +144,6 @@
 						"method": "GET",
 						"header": [],
 						"url": "{{base_url}}/api/users/23"
-					},
-					"response": []
-				},
-				{
-					"name": "New Request",
-					"id": "6ee84949-756d-4192-859d-3a5b27430753",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": []
 					},
 					"response": []
 				}
