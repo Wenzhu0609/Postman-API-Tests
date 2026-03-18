@@ -241,7 +241,10 @@
 									"pm.test(\"Body contains updatedAt\", function () {",
 									"    pm.expect(pm.response.text()).to.include(\"updatedAt\");",
 									"});",
-									""
+									"pm.test(\"Response has updatedAt property - Object check\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.have.property('updatedAt');",
+									"});"
 								],
 								"type": "text/javascript",
 								"packages": {},
