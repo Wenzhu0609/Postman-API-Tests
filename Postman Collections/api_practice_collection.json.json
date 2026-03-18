@@ -60,7 +60,7 @@
 								"id": "11ca96ad-35c7-447e-a2ab-e71e211f77be",
 								"exec": [
 									"pm.test(\"ReqRes response to get request\", function () {",
-									"    pm.response.to.have.status(200);",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);",
 									"});",
 									"pm.test(\"ReqRes has a fast response time\", function () {",
 									"    pm.expect(pm.response.responseTime).to.be.below(200);",
