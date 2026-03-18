@@ -167,7 +167,8 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "{{base_url}}/api/unknown/15"
 					},
 					"response": []
 				},
@@ -205,14 +206,24 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Create new user",
 					"id": "63bd3dc0-9c87-47b0-a7f2-f8cfe107c3b1",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"first_name\": \"Angelina\",\n\"last_name\": \"Jully\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/users/13"
 					},
 					"response": []
 				}
