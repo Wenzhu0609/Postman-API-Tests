@@ -226,6 +226,18 @@
 						"url": "{{base_url}}/api/users/13"
 					},
 					"response": []
+				},
+				{
+					"name": "Update user id 3",
+					"id": "9c1f2553-6f43-403b-a0fa-0be2aed196cc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "4d230f34-a5bc-4e76-805f-b9986c927439"
