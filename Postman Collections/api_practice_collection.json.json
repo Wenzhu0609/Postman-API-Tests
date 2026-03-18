@@ -78,17 +78,8 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"auth": {
-							"type": "noauth"
-						},
 						"method": "DELETE",
-						"header": [
-							{
-								"key": "x-api-key",
-								"value": "{{api_key}}",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"url": "{{base_url}}/api/unknown/5"
 					},
 					"response": []
@@ -117,13 +108,7 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": [
-							{
-								"key": "x-api-key",
-								"value": "{{api_key}}",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"url": "{{base_url}}/api/users/23"
 					},
 					"response": []
