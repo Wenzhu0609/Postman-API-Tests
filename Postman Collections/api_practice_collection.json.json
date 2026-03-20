@@ -171,6 +171,22 @@
 				},
 				{
 					"name": "List <source>",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b67794a6-8c56-401f-98da-5dee1feeac21",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"    });"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
 					"id": "efbaee48-f2c9-4090-90b6-44783ce8c512",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -184,6 +200,22 @@
 				},
 				{
 					"name": "Single <resource>",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9a218829-11a1-4bc4-8b49-f1789952557c",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"    });"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
 					"id": "96e82a4e-c77d-40cb-b97c-2ec889773d03",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -197,6 +229,22 @@
 				},
 				{
 					"name": "Single <resource> not found",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "88ff028e-5875-46b8-9537-8e8be4aba2f6",
+								"exec": [
+									"pm.test(\"User 23 is not found\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
 					"id": "065012ca-5d12-4248-a407-28d6afb5a5d7",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
