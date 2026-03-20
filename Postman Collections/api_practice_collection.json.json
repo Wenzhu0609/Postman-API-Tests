@@ -331,6 +331,40 @@
 						"url": "{{base_url}}/api/register"
 					},
 					"response": []
+				},
+				{
+					"name": "Register - New account - unsuccessful",
+					"id": "6d98f41b-054b-4beb-95c1-03fb113a0ab3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "//any email works, just don't add the password section\n{\n    \"email\": \"xydney@fife\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/register"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "968d3740-3df6-43cd-9cbf-263575880cf4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "4d230f34-a5bc-4e76-805f-b9986c927439"
