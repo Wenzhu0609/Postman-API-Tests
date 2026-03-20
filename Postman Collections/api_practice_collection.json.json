@@ -347,8 +347,8 @@
 									"});",
 									"pm.test(\"User firstname and lastname updated to Brad Pit\", function () {",
 									"    const jsonData = pm.response.json();",
-									"    pm.expect(pm.response.json().first_name).to.eql(\"Brad\");",
-									"    pm.expect(pm.response.json().last_name).to.eql(\"Pit\");",
+									"    pm.expect(jsonData.first_name).to.eql(\"Brad\");",
+									"    pm.expect(jsonData.last_name).to.eql(\"Pit\");",
 									"});"
 								],
 								"type": "text/javascript",
