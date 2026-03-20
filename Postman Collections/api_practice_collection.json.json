@@ -497,6 +497,46 @@
 				},
 				{
 					"name": "Register - New account - successful",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a139e180-1701-4683-b84b-7f06539d876e",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"    });",
+									"",
+									"//happy path:",
+									"//response body contains id, which is a positive integer and token, which is a string",
+									"//should also add a login action to test the new user is in the system (GET)",
+									"",
+									"pm.test(\"Response body contains id and token\", function () {",
+									"    pm.expect(pm.response.json().body).to.have.property(['id', 'token']);",
+									"});",
+									"",
+									"pm.test(\"Response body id is a positive integer\", function () {",
+									"    pm.expect(pm.response.json().id).to.be.a('number",
+									"    ');",
+									"    });",
+									"",
+									"pm.test(\"Response returned token\", function() {",
+									"    pm.expect(pm.response.json().token).to.not.be.null;",
+									"    });",
+									"",
+									"pm.test(\"Response body token is a string\", function () {",
+									"    pm.expect(pm.response.json().token).to.be.a('string');",
+									"});",
+									"",
+									"//Negative Testing:",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
 					"id": "6f74903a-180a-48bc-a456-cb675cc52d74",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
