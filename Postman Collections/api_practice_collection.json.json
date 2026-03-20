@@ -388,10 +388,14 @@
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
 									"});",
-									"pm.test(\"Response has updatedAt property - Object check\", function () {",
+									"pm.test(\"User firstname and lastname updated to Brad Pit\", function () {",
 									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.first_name).to.eql(\"Brad\");",
+									"    pm.expect(jsonData.last_name).to.eql(\"Pit\");",
 									"    pm.expect(jsonData).to.have.property('updatedAt');",
-									"});"
+									"",
+									"});",
+									""
 								],
 								"type": "text/javascript",
 								"packages": {},
