@@ -355,8 +355,52 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Login - Successful",
 					"id": "968d3740-3df6-43cd-9cbf-263575880cf4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\": \"eve.holt@reqres.in\", \"password\": \"cityslicka\"}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Login - Unsuccessful",
+					"id": "b68710f2-94d9-4a1e-ae34-432b2c3ad9b1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\": \"eve.holt@reqres.in\", \"password\": \"cityslicka\"}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/login"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "9ba847dc-cace-4d93-a930-04aa0d516d15",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
