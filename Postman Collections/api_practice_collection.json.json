@@ -59,7 +59,9 @@
 							"script": {
 								"id": "731321b8-7318-4913-959d-cd258a5f6e4f",
 								"exec": [
-									""
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"    });"
 								],
 								"type": "text/javascript",
 								"packages": {},
@@ -101,6 +103,26 @@
 				},
 				{
 					"name": "Single User id 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ee93fd96-2b6e-48c0-9b49-6ce75c047ba8",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"    });",
+									"",
+									"pm.test(\"Response with correct information for user id 3\", function () {",
+									"    pm.expect(pm.response.json().data.id).to.eql(3);",
+									"    });"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
 					"id": "e9020a4b-2983-48b4-9d5e-9b1abcd8fa21",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
