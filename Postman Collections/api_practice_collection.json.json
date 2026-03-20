@@ -431,7 +431,39 @@
 					"response": []
 				}
 			],
-			"id": "4d230f34-a5bc-4e76-805f-b9986c927439"
+			"id": "4d230f34-a5bc-4e76-805f-b9986c927439",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "91d14f06-75c1-4542-8815-d18735f2e7b9",
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "123e0af2-ecc4-4d6d-aa95-637c22103980",
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							"pm.test(\"Each page should respond under 200ms\"), function(    pm.",
+							")",
+							"",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			]
 		},
 		{
 			"name": "Get data",
