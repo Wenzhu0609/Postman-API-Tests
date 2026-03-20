@@ -433,7 +433,7 @@
 								"exec": [
 									"//need to test if the response status code is 204",
 									"//need to test if the response body is empty",
-									"//need to test if the content was actually deleted or only received request",
+									"//need to test if the user data was actually deleted or only received a request by adding a GET request right after, and response status code should be 404 or 410",
 									"pm.test(\"Status code is 204\", function () {",
 									"    pm.response.to.have.status(204);",
 									"    });",
@@ -469,12 +469,9 @@
 							"script": {
 								"id": "ee93fd96-2b6e-48c0-9b49-6ce75c047ba8",
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"    });",
-									"",
-									"pm.test(\"Response with correct information for user id 3\", function () {",
-									"    pm.expect(pm.response.json().data.id).to.eql(3);",
+									"//test response status code to be eigher 404 or 410",
+									"pm.test(\"Status code is 404 or 410\", function () {",
+									"    pm.response.to.have.status(404 || 410);",
 									"    });"
 								],
 								"type": "text/javascript",
@@ -496,7 +493,7 @@
 								"type": "text"
 							}
 						],
-						"url": "{{base_url}}/api/users/3"
+						"url": "{{base_url}}/api/users/6"
 					},
 					"response": []
 				},
