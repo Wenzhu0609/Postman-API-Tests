@@ -282,8 +282,37 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Delete user id 13",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e256099a-cff5-42c6-8aea-f65227b937c3",
+								"exec": [
+									"//need to test if the response status code is 204",
+									"//need to test if the response body is empty",
+									"//need to test if the content was actually deleted or only received request"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
 					"id": "18a09329-438e-4d19-9b48-dba456b07b76",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}/api/users/6"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "6f74903a-180a-48bc-a456-cb675cc52d74",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
