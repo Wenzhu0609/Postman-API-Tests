@@ -399,14 +399,34 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Delayed Response",
 					"id": "9ba847dc-cace-4d93-a930-04aa0d516d15",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/users?delay=3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "delay",
+									"value": "3"
+								}
+							]
+						}
 					},
 					"response": []
 				}
