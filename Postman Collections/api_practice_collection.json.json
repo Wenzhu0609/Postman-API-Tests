@@ -387,7 +387,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"email\": \"eve.holt@reqres.in\", \"password\": \"cityslicka\"}\n",
+							"raw": "//using different email address than what's given by the platform\n//still able to successfully login with wrong password, seems like a bug to me\n{\"email\": \"selina.holt@reqres.in\", \"password\": \"cityslicka\"}\n",
 							"options": {
 								"raw": {
 									"language": "json"
