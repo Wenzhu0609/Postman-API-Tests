@@ -270,9 +270,7 @@
 								"exec": [
 									"pm.test(\"ReqRes response to get request\", function () {",
 									"    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);",
-									"});",
-									"",
-									""
+									"});"
 								],
 								"type": "text/javascript",
 								"packages": {},
