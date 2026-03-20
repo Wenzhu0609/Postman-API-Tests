@@ -373,6 +373,26 @@
 				},
 				{
 					"name": "Update user id 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f7b0cd59-729a-4c2f-a1a2-3af65bf600fc",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Response has updatedAt property - Object check\", function () {",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.have.property('updatedAt');",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
 					"id": "76c972f9-28e9-4c19-b1cd-70c0f034373c",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -382,7 +402,12 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"first_name\": \"Brad\",\n  \"last_name\": \"Pit\"\n}"
+							"raw": "//to update using PATCH, only write the section need to be changes, the rest remain safe and untouched on the server without having to r-send them\n\n\n{\n  \"first_name\": \"Brad\",\n  \"last_name\": \"Pit\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": "{{base_url}}/api/users/3"
 					},
