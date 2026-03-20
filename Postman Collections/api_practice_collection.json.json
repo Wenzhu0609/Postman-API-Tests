@@ -206,7 +206,7 @@
 					"response": []
 				},
 				{
-					"name": "Create new user",
+					"name": "Create new user id 13",
 					"id": "63bd3dc0-9c87-47b0-a7f2-f8cfe107c3b1",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -261,6 +261,35 @@
 							"raw": "{\n  \"first_name\": \"Brad\",\n  \"last_name\": \"Pit\"\n}"
 						},
 						"url": "{{base_url}}/api/users/3"
+					},
+					"response": []
+				},
+				{
+					"name": "Update user id 3",
+					"id": "76c972f9-28e9-4c19-b1cd-70c0f034373c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"first_name\": \"Brad\",\n  \"last_name\": \"Pit\"\n}"
+						},
+						"url": "{{base_url}}/api/users/3"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "18a09329-438e-4d19-9b48-dba456b07b76",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
 					},
 					"response": []
 				}
