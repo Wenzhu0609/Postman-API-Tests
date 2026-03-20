@@ -53,6 +53,22 @@
 			"item": [
 				{
 					"name": "List users on page 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "731321b8-7318-4913-959d-cd258a5f6e4f",
+								"exec": [
+									"pm.test(\"Each page should respond under 200ms\", function( ) {",
+									"    pm.response.responseTime.below(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
 					"id": "6ee84949-756d-4192-859d-3a5b27430753",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -436,7 +452,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "91d14f06-75c1-4542-8815-d18735f2e7b9",
+						"id": "b015fc47-5aa3-48b3-947a-7ee0bed7a10d",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
@@ -448,13 +464,14 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "123e0af2-ecc4-4d6d-aa95-637c22103980",
+						"id": "96174992-a6e7-4073-955a-ce81f555cb5f",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
 						"exec": [
-							"pm.test(\"Each page should respond under 200ms\"), function(    pm.",
-							")",
+							"pm.test(\"Each page should respond under 200ms\", function( ) {",
+							"    pm.response.responseTime.to.be.below(200);",
+							"});",
 							"",
 							"",
 							"pm.test(\"Status code is 200\", function () {",
