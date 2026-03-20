@@ -345,9 +345,10 @@
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
 									"});",
-									"pm.test(\"Response has updatedAt property - Object check\", function () {",
+									"pm.test(\"User firstname and lastname updated to Brad Pit\", function () {",
 									"    const jsonData = pm.response.json();",
-									"    pm.expect(jsonData).to.have.property('updatedAt');",
+									"    pm.expect(pm.response.json().first_name).to.eql(\"Brad\");",
+									"    pm.expect(pm.response.json().last_name).to.eql(\"Pit\");",
 									"});"
 								],
 								"type": "text/javascript",
@@ -365,7 +366,12 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n            \"email\": \"emma.wong@reqres.in\",\n            \"first_name\": \"Brad\",\n            \"last_name\": \"Pit\",\n            \"avatar\": \"https://reqres.in/img/faces/3-image.jpg\"\n}"
+							"raw": "//to update with PUT request, need to send the entire user object, otherwise the server might assume to leave the email and avatar blank if not included in the body\n\n{\n    \"email\": \"emma.wong@reqres.in\",\n    \"first_name\": \"Brad\",\n    \"last_name\": \"Pit\",\n    \"avatar\": \"https://reqres.in/img/faces/3-image.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": "{{base_url}}/api/users/3"
 					},
