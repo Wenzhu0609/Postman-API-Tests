@@ -424,7 +424,7 @@
 					"response": []
 				},
 				{
-					"name": "Delete user id 13",
+					"name": "Delete user id 6",
 					"event": [
 						{
 							"listen": "test",
@@ -458,6 +458,45 @@
 						"method": "DELETE",
 						"header": [],
 						"url": "{{base_url}}/api/users/6"
+					},
+					"response": []
+				},
+				{
+					"name": "Confirm deletion of user id 6",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ee93fd96-2b6e-48c0-9b49-6ce75c047ba8",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"    });",
+									"",
+									"pm.test(\"Response with correct information for user id 3\", function () {",
+									"    pm.expect(pm.response.json().data.id).to.eql(3);",
+									"    });"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"id": "eaec110c-9def-4483-ac24-67cf83bc9346",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": "{{base_url}}/api/users/3"
 					},
 					"response": []
 				},
