@@ -311,7 +311,7 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Register - New account - successful",
 					"id": "6f74903a-180a-48bc-a456-cb675cc52d74",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
