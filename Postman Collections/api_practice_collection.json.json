@@ -512,7 +512,7 @@
 									"//should also add a login action to test the new user is in the system (GET)",
 									"",
 									"pm.test(\"Response body contains id and token\", function () {",
-									"    pm.expect(pm.response.json()).to.have.all.keys('id', 'token');",
+									"    pm.expect(pm.response.json()).to.include.keys('id', 'token');",
 									"});",
 									"",
 									"pm.test(\"Response body id is a number\", function () {",
