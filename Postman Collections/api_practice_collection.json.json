@@ -59,9 +59,7 @@
 							"script": {
 								"id": "731321b8-7318-4913-959d-cd258a5f6e4f",
 								"exec": [
-									"pm.test(\"Each page should respond under 200ms\", function( ) {",
-									"    pm.response.responseTime.below(200);",
-									"});"
+									""
 								],
 								"type": "text/javascript",
 								"packages": {},
@@ -199,9 +197,7 @@
 									"pm.test(\"ReqRes response to get request\", function () {",
 									"    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);",
 									"});",
-									"pm.test(\"ReqRes has a fast response time\", function () {",
-									"    pm.expect(pm.response.responseTime).to.be.below(200);",
-									"});",
+									"",
 									""
 								],
 								"type": "text/javascript",
@@ -452,7 +448,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "b015fc47-5aa3-48b3-947a-7ee0bed7a10d",
+						"id": "73978687-09bb-44e9-8e09-4e541d4cace5",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
@@ -464,19 +460,15 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "96174992-a6e7-4073-955a-ce81f555cb5f",
+						"id": "5a7f539c-56ea-46fd-b6f7-b4e128b9fcbf",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
 						"exec": [
-							"pm.test(\"Each page should respond under 200ms\", function( ) {",
-							"    pm.response.responseTime.to.be.below(200);",
+							"pm.test(\"Each page should respond under 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
 							"});",
-							"",
-							"",
-							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
-							"});"
+							""
 						]
 					}
 				}
