@@ -293,6 +293,27 @@
 				},
 				{
 					"name": "Create new user id 13",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a64d39fa-128f-4259-bcb3-bed5d544bd05",
+								"exec": [
+									"pm.test(\"Stuts Code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"    });",
+									"",
+									"pm.test(\"New user Angelina Jully is added\", function() {",
+									"    pm.expect(pm.response.json().first_name).to.eql(\"Angelina\");",
+									"    pm.expect(pm.response.json().last_name).to.eql(\"Jully\");",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
 					"id": "63bd3dc0-9c87-47b0-a7f2-f8cfe107c3b1",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
