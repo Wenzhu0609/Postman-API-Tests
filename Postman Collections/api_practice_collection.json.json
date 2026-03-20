@@ -433,7 +433,16 @@
 								"exec": [
 									"//need to test if the response status code is 204",
 									"//need to test if the response body is empty",
-									"//need to test if the content was actually deleted or only received request"
+									"//need to test if the content was actually deleted or only received request",
+									"pm.test(\"Status code is 204\", function () {",
+									"    pm.response.to.have.status(204);",
+									"    });",
+									"",
+									"pm.test(\"Response body is empty\", function () {",
+									"    pm.expect(pm.response.text()).to.be.empty;",
+									"    });",
+									"",
+									""
 								],
 								"type": "text/javascript",
 								"packages": {},
