@@ -661,6 +661,35 @@
 				},
 				{
 					"name": "Login - Unsuccessful",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d91dc452-bf40-4774-a362-28dffdef6843",
+								"exec": [
+									"",
+									"",
+									"//expect to return 400",
+									"//expect to have error property",
+									"//expect error to be \"user not found\"",
+									"",
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"    });",
+									"",
+									"pm.test(\"Response with error message: user not found\", function () {",
+									"    pm.expect(pm.response.json, \"Response missing error field\")",
+									"        .to.have.property(\"error\")//Explicit existence check",
+									"        .that.equals(\"user not found\")",
+									"        })",
+									"        "
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
 					"id": "b68710f2-94d9-4a1e-ae34-432b2c3ad9b1",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
