@@ -614,7 +614,15 @@
 									"});",
 									"pm.test(\"Response contains a token \", function() {",
 									"    pm.expect(pm.response.json()).to.have.property(\"token\")",
-									"});"
+									"});",
+									"",
+									"pm.test(\"Response token should not be empty\", function () {",
+									"    pm.expect(pm.response.json().token).to.not.be.empty;",
+									"})",
+									"",
+									"pm.test(\"Response token should be a string\", function (){",
+									"    pm.response.json().error.should.be.a('string')",
+									"})"
 								],
 								"type": "text/javascript",
 								"packages": {},
