@@ -712,6 +712,38 @@
 				},
 				{
 					"name": "Delayed Response",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "12d192d4-04f1-4d1d-b999-0f1df4fff9ce",
+								"exec": [
+									"pm.variables.set(\"skip_time_test\", true)",
+									"const skipTest = pm.variables.get(\"skip_time_test\");",
+									"",
+									"if (!skipTest) {",
+									"    pm.test(\"Response time is less than 200ms\", function () {",
+									"        pm.expect(pm.response.responseTime).to.be.below(200);",
+									"    });",
+									"}",
+									"",
+									"// Clean up: unset the variable so it doesn't affect the NEXT request",
+									"pm.variables.set(\"skip_time_test\", false);",
+									"",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"    });",
+									"",
+									"pm.test(\"Response time is over 3s\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.above(3000);",
+									"    });"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
 					"id": "9ba847dc-cace-4d93-a930-04aa0d516d15",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
