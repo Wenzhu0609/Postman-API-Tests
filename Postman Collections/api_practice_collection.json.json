@@ -628,7 +628,7 @@
 									"",
 									"pm.test(\"Token should follow business requirements\", function() {",
 									"    pm.expect(jsonData, \"Response missing token property\")",
-									"    .to.have.property(\"tokn\")      //explicit existence check",
+									"    .to.have.property(\"token\")      //explicit existence check",
 									"    .and.be.a(\"string\")             //type check",
 									"    .and.not.be.empty               //value check",
 									"})"
