@@ -667,8 +667,6 @@
 							"script": {
 								"id": "d91dc452-bf40-4774-a362-28dffdef6843",
 								"exec": [
-									"",
-									"",
 									"//expect to return 400",
 									"//expect to have error property",
 									"//expect error to be \"user not found\"",
@@ -678,11 +676,11 @@
 									"    });",
 									"",
 									"pm.test(\"Response with error message: user not found\", function () {",
-									"    pm.expect(pm.response.json, \"Response missing error field\")",
-									"        .to.have.property(\"error\")//Explicit existence check",
-									"        .that.equals(\"user not found\")",
+									"    pm.expect(pm.response.json(), \"Response missing error field\")",
+									"        .to.have.property(\"error\")      //Explicit existence check",
+									"        .that.equal(\"user not found\");  //Value check",
 									"        })",
-									"        "
+									""
 								],
 								"type": "text/javascript",
 								"packages": {},
@@ -718,7 +716,6 @@
 							"script": {
 								"id": "12d192d4-04f1-4d1d-b999-0f1df4fff9ce",
 								"exec": [
-									"pm.variables.set(\"skip_time_test\", true);",
 									"",
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -727,6 +724,19 @@
 									"pm.test(\"Response time is over 3s\", function () {",
 									"    pm.expect(pm.response.responseTime).to.be.above(3000);",
 									"    });",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "619cf1be-bb0b-4c1c-a628-88b998958f72",
+								"exec": [
+									"pm.variables.set(\"skip_time_test\", true);",
 									""
 								],
 								"type": "text/javascript",
@@ -771,7 +781,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "403df0ce-9075-40ec-85d5-196432883b2d",
+						"id": "f5148da4-9741-4a10-bf0d-f62af47001ed",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
@@ -783,7 +793,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "dd11bdfe-c584-4e0f-9b40-4099ea32058d",
+						"id": "5599f345-38f2-4b86-bb86-d4e435cf8a24",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
@@ -791,6 +801,7 @@
 							"pm.test(\"Each page should respond under 200ms\", function () {",
 							"    pm.expect(pm.response.responseTime).to.be.below(200);",
 							"});",
+							"",
 							"const skipTest = pm.variables.get(\"skip_time_test\");",
 							"",
 							"if (!skipTest) {",
