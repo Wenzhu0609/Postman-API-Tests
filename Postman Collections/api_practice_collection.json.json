@@ -612,8 +612,8 @@
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.expect(pm.response.code).to.eql(200);",
 									"});",
-									"pm.test(\"Response contains a token \"), function() {",
-									"    pm.expect(pm.response.json()).to.have(\"token\")",
+									"pm.test(\"Response contains a token \", function() {",
+									"    pm.expect(pm.response.json()).to.have.property(\"token\")",
 									"});"
 								],
 								"type": "text/javascript",
