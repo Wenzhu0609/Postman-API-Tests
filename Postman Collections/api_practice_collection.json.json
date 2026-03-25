@@ -558,6 +558,29 @@
 				},
 				{
 					"name": "Register - New account - unsuccessful",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "68c501df-1a1d-483b-9fe6-603e3ad3f3e4",
+								"exec": [
+									"pm.test(\"Response should return status code 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"    });",
+									"",
+									"pm.test(\"Response should contain error message 'Missing password'\", function () {",
+									"    const responseBody = pm.response.json();",
+									"    pm.expect(responseBody).to.have.property(\"error\")",
+									"    pm.expect(responseBody.error).to.eql(\"Missing password\");",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
 					"id": "6d98f41b-054b-4beb-95c1-03fb113a0ab3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -580,6 +603,25 @@
 				},
 				{
 					"name": "Login - Successful",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b3d14beb-4a5f-4904-af38-a940440dfe66",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.expect(pm.response.code).to.eql(200);",
+									"});",
+									"pm.test(\"Response contains a token \"), function() {",
+									"    pm.expect(pm.response.json()).to.have(\"token\")",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
 					"id": "968d3740-3df6-43cd-9cbf-263575880cf4",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
