@@ -781,7 +781,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "f5148da4-9741-4a10-bf0d-f62af47001ed",
+						"id": "62025d39-cbe8-40f1-b781-64d97193f7af",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
@@ -793,15 +793,11 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "5599f345-38f2-4b86-bb86-d4e435cf8a24",
+						"id": "8563d79d-0543-4d7b-b453-d687b2dd8574",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
 						"exec": [
-							"pm.test(\"Each page should respond under 200ms\", function () {",
-							"    pm.expect(pm.response.responseTime).to.be.below(200);",
-							"});",
-							"",
 							"const skipTest = pm.variables.get(\"skip_time_test\");",
 							"",
 							"if (!skipTest) {",
