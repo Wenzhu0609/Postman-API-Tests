@@ -718,17 +718,7 @@
 							"script": {
 								"id": "12d192d4-04f1-4d1d-b999-0f1df4fff9ce",
 								"exec": [
-									"pm.variables.set(\"skip_time_test\", true)",
-									"const skipTest = pm.variables.get(\"skip_time_test\");",
-									"",
-									"if (!skipTest) {",
-									"    pm.test(\"Response time is less than 200ms\", function () {",
-									"        pm.expect(pm.response.responseTime).to.be.below(200);",
-									"    });",
-									"}",
-									"",
-									"// Clean up: unset the variable so it doesn't affect the NEXT request",
-									"pm.variables.set(\"skip_time_test\", false);",
+									"pm.variables.set(\"skip_time_test\", true);",
 									"",
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -736,7 +726,8 @@
 									"",
 									"pm.test(\"Response time is over 3s\", function () {",
 									"    pm.expect(pm.response.responseTime).to.be.above(3000);",
-									"    });"
+									"    });",
+									""
 								],
 								"type": "text/javascript",
 								"packages": {},
@@ -780,7 +771,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "73978687-09bb-44e9-8e09-4e541d4cace5",
+						"id": "403df0ce-9075-40ec-85d5-196432883b2d",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
@@ -792,7 +783,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "5a7f539c-56ea-46fd-b6f7-b4e128b9fcbf",
+						"id": "dd11bdfe-c584-4e0f-9b40-4099ea32058d",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
@@ -800,6 +791,15 @@
 							"pm.test(\"Each page should respond under 200ms\", function () {",
 							"    pm.expect(pm.response.responseTime).to.be.below(200);",
 							"});",
+							"const skipTest = pm.variables.get(\"skip_time_test\");",
+							"",
+							"if (!skipTest) {",
+							"    pm.test(\"Response time is less than 200ms\", function () {",
+							"        pm.expect(pm.response.responseTime).to.be.below(200);",
+							"    });",
+							"}",
+							"// Clean up: unset the variable so it doesn't affect the NEXT request",
+							"pm.variables.set(\"skip_time_test\", false);",
 							""
 						]
 					}
