@@ -621,7 +621,7 @@
 									"})",
 									"",
 									"pm.test(\"Response token should be a string\", function (){",
-									"    pm.response.json().token.should.be.a('string')",
+									"    pm.expect(pm.response.json().token).to.be.a('string')",
 									"})"
 								],
 								"type": "text/javascript",
