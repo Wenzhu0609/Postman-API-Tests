@@ -602,64 +602,6 @@
 					"response": []
 				},
 				{
-					"name": "Login - Successful",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "b3d14beb-4a5f-4904-af38-a940440dfe66",
-								"exec": [
-									"const jsonData = pm.response.json();",
-									"",
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.expect(pm.response.code).to.eql(200);",
-									"});",
-									"pm.test(\"Response contains a token \", function() {",
-									"    pm.expect(jsonData).to.have.property(\"token\")",
-									"});",
-									"",
-									"pm.test(\"Response token should not be empty\", function () {",
-									"    pm.expect(jsonData.token).to.not.be.empty;",
-									"});",
-									"",
-									"pm.test(\"Response token should be a string\", function (){",
-									"    pm.expect(jsonData.token).to.be.a('string')",
-									"})",
-									"",
-									"pm.test(\"Token should follow business requirements\", function() {",
-									"    pm.expect(jsonData, \"Response missing token property\")",
-									"    .to.have.property(\"token\")      //explicit existence check",
-									"    .and.be.a(\"string\")             //type check",
-									"    .and.not.be.empty               //value check",
-									"})"
-								],
-								"type": "text/javascript",
-								"packages": {},
-								"requests": {}
-							}
-						}
-					],
-					"id": "968d3740-3df6-43cd-9cbf-263575880cf4",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\"email\": \"eve.holt@reqres.in\", \"password\": \"cityslicka\"}\n",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{base_url}}/api/login"
-					},
-					"response": []
-				},
-				{
 					"name": "Login - Unsuccessful",
 					"event": [
 						{
@@ -774,6 +716,64 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Login - Successful",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b3d14beb-4a5f-4904-af38-a940440dfe66",
+								"exec": [
+									"const jsonData = pm.response.json();",
+									"",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.expect(pm.response.code).to.eql(200);",
+									"});",
+									"pm.test(\"Response contains a token \", function() {",
+									"    pm.expect(jsonData).to.have.property(\"token\")",
+									"});",
+									"",
+									"pm.test(\"Response token should not be empty\", function () {",
+									"    pm.expect(jsonData.token).to.not.be.empty;",
+									"});",
+									"",
+									"pm.test(\"Response token should be a string\", function (){",
+									"    pm.expect(jsonData.token).to.be.a('string')",
+									"})",
+									"",
+									"pm.test(\"Token should follow business requirements\", function() {",
+									"    pm.expect(jsonData, \"Response missing token property\")",
+									"    .to.have.property(\"token\")      //explicit existence check",
+									"    .and.be.a(\"string\")             //type check",
+									"    .and.not.be.empty               //value check",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"id": "968d3740-3df6-43cd-9cbf-263575880cf4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\": \"eve.holt@reqres.in\", \"password\": \"cityslicka\"}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/login"
+					},
+					"response": []
 				}
 			],
 			"id": "4d230f34-a5bc-4e76-805f-b9986c927439",
@@ -781,7 +781,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "62025d39-cbe8-40f1-b781-64d97193f7af",
+						"id": "088ce2ef-46b8-42e6-a7b8-921a4f38d93d",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
@@ -793,7 +793,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "8563d79d-0543-4d7b-b453-d687b2dd8574",
+						"id": "aa5cea76-2418-49af-915a-e91dd7dec0fc",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
@@ -806,7 +806,7 @@
 							"    });",
 							"}",
 							"// Clean up: unset the variable so it doesn't affect the NEXT request",
-							"pm.variables.set(\"skip_time_test\", false);",
+							"//pm.variables.set(\"skip_time_test\", false);",
 							""
 						]
 					}
