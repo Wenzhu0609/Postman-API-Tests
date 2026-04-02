@@ -914,6 +914,18 @@
 						"url": "{{base_url}}/Library/Addbook.php"
 					},
 					"response": []
+				},
+				{
+					"name": "Search for a book",
+					"id": "5e893e19-a2e6-4740-bc16-2b852f9581d3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "0a9a05c1-7bae-452f-96d1-7355136151dc"
