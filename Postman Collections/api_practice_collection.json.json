@@ -918,8 +918,36 @@
 					"response": []
 				},
 				{
-					"name": "Search for a book",
+					"name": "Search for a book - Successful",
 					"id": "5e893e19-a2e6-4740-bc16-2b852f9581d3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/Library/GetBook.php?AuthorName=Johnfoe",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"Library",
+								"GetBook.php"
+							],
+							"query": [
+								{
+									"key": "AuthorName",
+									"value": "Johnfoe"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search for a book - Unsuccessful",
+					"id": "1255bf1d-7f96-4027-b88b-4778f50d2279",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1082,6 +1110,12 @@
 					""
 				]
 			}
+		}
+	],
+	"variable": [
+		{
+			"key": "author_name",
+			"value": ""
 		}
 	]
 }
