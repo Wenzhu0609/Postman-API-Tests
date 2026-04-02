@@ -835,13 +835,42 @@
 				},
 				{
 					"name": "New Request",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d618fbf5-5b32-4b5b-bd55-bc3585ff7f36",
+								"exec": [
+									"// Need to test that the status code = 200",
+									"// Need to confirm that the returned body contains 2 fields: Msg and ID",
+									"// Need to confirm that the Msg field contains the string \"successfully added\"",
+									"// Need to confirm that the ID field contains a string of length 6",
+									"",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
 					"id": "48667f3d-26c2-4e6d-8d93-46b9326ab805",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "// To add a new book:\n// name: Learn Appium Automation with Java\n// isbn: bcd\n// Aisle: 227\n// Author: John foe\n\n// {\n//     \"name\": \"Learn Appium Automation with Java\",\n//     \"isbn\": \"bcd\",\n//     \"aisle\": \"227\",\n//     \"author\": \"John foe\"\n// }\n\n{\n    \"name\": \"Fried Green Tomatoes at the Whistle Stop Cafe\",\n    \"isbn\": \"0-394-56152-X\",\n    \"aisle\": \"365\",\n    \"author\": \"Fannie Flagg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/Library/Addbook.php"
 					},
 					"response": []
 				}
