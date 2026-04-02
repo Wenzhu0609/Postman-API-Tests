@@ -918,7 +918,7 @@
 					"response": []
 				},
 				{
-					"name": "Search for a book - Successful",
+					"name": "Search for a book - Unsuccessful",
 					"id": "5e893e19-a2e6-4740-bc16-2b852f9581d3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -946,7 +946,7 @@
 					"response": []
 				},
 				{
-					"name": "Search for a book - Unsuccessful",
+					"name": "Search for a book - Successful",
 					"id": "1255bf1d-7f96-4027-b88b-4778f50d2279",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
