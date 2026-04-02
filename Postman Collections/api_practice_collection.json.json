@@ -1011,19 +1011,19 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "405cda7e-d607-463c-84d2-695b8d6d8931",
+				"id": "a5fe60d7-0a0b-45a1-bd00-85df5ff0cf5f",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
 				"exec": [
-					""
+					"pm.collectionVariables.set(\"author_name\", \"New Random Name\");"
 				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
-				"id": "b14a334a-6651-406f-a643-ef120999c9cb",
+				"id": "f73d39e4-8b48-43fd-994d-f01950288561",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
@@ -1035,7 +1035,6 @@
 	],
 	"variable": [
 		{
-			"key": "author_name",
 			"value": ""
 		}
 	]
