@@ -820,7 +820,20 @@
 		},
 		{
 			"name": "Library - API",
-			"item": [],
+			"item": [
+				{
+					"name": "New Request",
+					"id": "fe232ad5-75d0-4422-932e-023d81426da6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
 			"id": "0a9a05c1-7bae-452f-96d1-7355136151dc"
 		},
 		{
