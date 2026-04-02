@@ -946,7 +946,34 @@
 					"response": []
 				}
 			],
-			"id": "0a9a05c1-7bae-452f-96d1-7355136151dc"
+			"id": "0a9a05c1-7bae-452f-96d1-7355136151dc",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "fb339827-3568-41b4-b5e1-51e2a576cc0e",
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							"pm.collectionVariables.set(\"author_name\", \"New Random Name\");",
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "7150e301-4132-473e-89ee-62c2704b683c",
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
 		},
 		{
 			"name": "Get data",
@@ -1005,25 +1032,37 @@
 				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
 			},
 			"response": []
+		},
+		{
+			"name": "New Request",
+			"id": "e7709fe2-c091-411e-b04a-b8a05ca40ca7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"id": "cd6ce1b9-ee13-4077-ae5b-3af9d5413cd7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	],
 	"event": [
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "a5fe60d7-0a0b-45a1-bd00-85df5ff0cf5f",
-				"type": "text/javascript",
-				"packages": {},
-				"requests": {},
-				"exec": [
-					"pm.collectionVariables.set(\"author_name\", \"New Random Name\");"
-				]
-			}
-		},
-		{
-			"listen": "test",
-			"script": {
-				"id": "f73d39e4-8b48-43fd-994d-f01950288561",
+				"id": "13ac74eb-5bb5-40c2-a2c4-4b897deb2fa0",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
@@ -1031,11 +1070,18 @@
 					""
 				]
 			}
-		}
-	],
-	"variable": [
+		},
 		{
-			"value": ""
+			"listen": "test",
+			"script": {
+				"id": "2d887bcb-464f-4529-a3aa-f2c194cd3554",
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
 		}
 	]
 }
