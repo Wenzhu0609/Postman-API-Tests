@@ -822,8 +822,20 @@
 			"name": "Library - API",
 			"item": [
 				{
-					"name": "New Request",
+					"name": "Reaching the Libray",
 					"id": "fe232ad5-75d0-4422-932e-023d81426da6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "48667f3d-26c2-4e6d-8d93-46b9326ab805",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
