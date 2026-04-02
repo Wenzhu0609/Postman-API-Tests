@@ -947,6 +947,27 @@
 				},
 				{
 					"name": "Search for a book - Successful",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e0835e71-7110-4fcb-94c8-9a564ea197c6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"    });",
+									"",
+									"pm.test(\"Response body contains properties book_name, isbn, and aisle\", function () {",
+									"    pm.response.to.have.jsonSchema({\"book_name\", \"isbn\", \"aisle\"});",
+									"    });",
+									"    "
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
 					"id": "1255bf1d-7f96-4027-b88b-4778f50d2279",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
