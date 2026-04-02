@@ -834,7 +834,7 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Add a new book",
 					"event": [
 						{
 							"listen": "test",
