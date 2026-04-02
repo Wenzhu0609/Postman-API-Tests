@@ -814,6 +814,11 @@
 			]
 		},
 		{
+			"name": "EventHub - REST API",
+			"item": [],
+			"id": "0f916dec-e471-449f-9281-7e0e7d5fe525"
+		},
+		{
 			"name": "Get data",
 			"event": [
 				{
