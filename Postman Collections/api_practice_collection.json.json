@@ -927,7 +927,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/Library/GetBook.php?AuthorName=Johnfoe",
+							"raw": "{{base_url}}/Library/GetBook.php?AuthorName=idonotexist",
 							"host": [
 								"{{base_url}}"
 							],
@@ -938,7 +938,7 @@
 							"query": [
 								{
 									"key": "AuthorName",
-									"value": "Johnfoe"
+									"value": "idonotexist"
 								}
 							]
 						}
