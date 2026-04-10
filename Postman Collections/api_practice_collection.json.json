@@ -973,7 +973,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/Library/GetBook.php?AuthorName=FannieFlagg",
+							"raw": "{{base_url}}/Library/GetBook.php?AuthorName=Fannie Flagg",
 							"host": [
 								"{{base_url}}"
 							],
@@ -994,7 +994,7 @@
 								},
 								{
 									"key": "AuthorName",
-									"value": "FannieFlagg"
+									"value": "Fannie Flagg"
 								}
 							]
 						}
