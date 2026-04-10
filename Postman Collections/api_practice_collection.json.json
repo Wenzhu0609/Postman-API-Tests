@@ -836,19 +836,6 @@
 			"name": "Library - API",
 			"item": [
 				{
-					"name": "Reaching the Libray",
-					"id": "fe232ad5-75d0-4422-932e-023d81426da6",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": "{{base_url}}/Library/Addbook.php"
-					},
-					"response": []
-				},
-				{
 					"name": "Add a new book",
 					"event": [
 						{
@@ -946,7 +933,7 @@
 					"response": []
 				},
 				{
-					"name": "Search for a book - Successful",
+					"name": "Search book by Author - Successful",
 					"event": [
 						{
 							"listen": "test",
