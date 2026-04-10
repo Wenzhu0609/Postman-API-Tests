@@ -918,7 +918,7 @@
 					"response": []
 				},
 				{
-					"name": "Search for a book - Unsuccessful",
+					"name": "Search book by Author - Unsuccessful",
 					"id": "5e893e19-a2e6-4740-bc16-2b852f9581d3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
