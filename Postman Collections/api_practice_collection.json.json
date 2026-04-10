@@ -990,6 +990,134 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Search book by ID - Successful",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e0835e71-7110-4fcb-94c8-9a564ea197c6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response body contains properties book_name, isbn, and aisle\", function () {",
+									"    pm.response.to.have.jsonSchema({",
+									"        \"type\": \"array\",",
+									"        \"items\": {",
+									"            \"type\": \"object\",",
+									"            \"required\": [\"book_name\", \"isbn\", \"aisle\"],",
+									"            \"properties\": {",
+									"                \"book_name\": { \"type\": \"string\" },",
+									"                \"isbn\": { \"type\": \"string\" },",
+									"                \"aisle\": { \"type\": \"string\" }",
+									"            }",
+									"        }",
+									"    });",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"id": "187fc620-b4ef-4e8e-8b0a-aa17f9692897",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/Library/GetBook.php?ID=bcd227",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"Library",
+								"GetBook.php"
+							],
+							"query": [
+								{
+									"key": "ID",
+									"value": "bcd227"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a new book Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d618fbf5-5b32-4b5b-bd55-bc3585ff7f36",
+								"exec": [
+									"// Need to test that the status code = 200",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"    });",
+									"",
+									"",
+									"// Need to confirm that the returned body contains 2 fields: Msg and ID",
+									"pm.test(\"Response body contains Msg and ID\", function () {",
+									"    pm.expect(pm.response.json()).to.have.property(\"Msg\");",
+									"    pm.expect(pm.response.json()).to.have.property(\"ID\");",
+									"    });",
+									"",
+									"",
+									"// Need to confirm that the Msg field contains the string \"successfully added\"",
+									"pm.test(\"Msg field contains 'successfully added'\", function () {",
+									"    pm.expect(pm.response.json().Msg).to.include(\"successfully added\");",
+									"    });",
+									"",
+									"",
+									"// Need to confirm that the ID field contains a string",
+									"pm.test(\"ID field is a string\", function () {",
+									"    pm.expect(pm.response.json().ID).to.be.a('string');",
+									"    });",
+									"",
+									"",
+									"// Need to check if the id matches the book's isbn + aisle",
+									"pm.test(\"ID matches the book's ISBN and aisle\", function () {",
+									"    const requestData = JSON.parse(pm.request.body.raw);",
+									"    const responseData = pm.response.json();",
+									"    const expectedID = `${requestData.isbn}${requestData.aisle}`;",
+									"    pm.expect(responseData.ID).to.equal(expectedID);",
+									"    });",
+									"",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"id": "051e93d6-58ed-4e5b-9cd5-2ddefcc1ccda",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "// To add a new book:\n// name: Learn Appium Automation with Java\n// isbn: bcd\n// Aisle: 227\n// Author: John foe\n\n{\n    \"name\": \"Learn Appium Automation with Java\",\n    \"isbn\": \"bcd\",\n    \"aisle\": \"227\",\n    \"author\": \"John foe\"\n}\n\n// {\n//     \"name\": \"Fried Green Tomatoes at the Whistle Stop Cafe\",\n//     \"isbn\": \"0-394-56152-X\",\n//     \"aisle\": \"365\",\n//     \"author\": \"Fannie Flagg\"\n// }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/Library/Addbook.php"
+					},
+					"response": []
 				}
 			],
 			"id": "0a9a05c1-7bae-452f-96d1-7355136151dc",
