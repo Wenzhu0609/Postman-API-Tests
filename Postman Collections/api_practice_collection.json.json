@@ -893,7 +893,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "// To add a new book:\n// name: Learn Appium Automation with Java\n// isbn: bcd\n// Aisle: 227\n// Author: John foe\n\n{\n    \"name\": \"Learn Appium Automation with Java\",\n    \"isbn\": \"bcd\",\n    \"aisle\": \"227\",\n    \"author\": \"John foe\"\n}\n\n// {\n//     \"name\": \"Fried Green Tomatoes at the Whistle Stop Cafe\",\n//     \"isbn\": \"0-394-56152-X\",\n//     \"aisle\": \"365\",\n//     \"author\": \"Fannie Flagg\"\n// }",
+							"raw": "// To add a new book:\n// name: Learn Appium Automation with Java\n// isbn: bcd\n// Aisle: 227\n// Author: John foe\n\n// {\n//     \"name\": \"Learn Appium Automation with Java\",\n//     \"isbn\": \"bcd\",\n//     \"aisle\": \"227\",\n//     \"author\": \"John foe\"\n// }\n\n{\n    \"name\": \"Fried Green Tomatoes at the Whistle Stop Cafe\",\n    \"isbn\": \"0-394-56152-X\",\n    \"aisle\": \"365\",\n    \"author\": \"Fannie Flagg\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1051,7 +1051,7 @@
 					"response": []
 				},
 				{
-					"name": "Add a new book Copy",
+					"name": "Delete a book",
 					"event": [
 						{
 							"listen": "test",
@@ -1064,33 +1064,16 @@
 									"    });",
 									"",
 									"",
-									"// Need to confirm that the returned body contains 2 fields: Msg and ID",
-									"pm.test(\"Response body contains Msg and ID\", function () {",
+									"// Need to confirm that the returned body contains the msg field",
+									"pm.test(\"Response body contains Msg\", function () {",
 									"    pm.expect(pm.response.json()).to.have.property(\"Msg\");",
-									"    pm.expect(pm.response.json()).to.have.property(\"ID\");",
 									"    });",
 									"",
 									"",
-									"// Need to confirm that the Msg field contains the string \"successfully added\"",
-									"pm.test(\"Msg field contains 'successfully added'\", function () {",
-									"    pm.expect(pm.response.json().Msg).to.include(\"successfully added\");",
+									"// Need to confirm that the Msg field contains the string \"book is successfully deleted\"",
+									"pm.test(\"Msg field contains 'book is successfully deleted'\", function () {",
+									"    pm.expect(pm.response.json().Msg).to.include(\"book is successfully deleted\");",
 									"    });",
-									"",
-									"",
-									"// Need to confirm that the ID field contains a string",
-									"pm.test(\"ID field is a string\", function () {",
-									"    pm.expect(pm.response.json().ID).to.be.a('string');",
-									"    });",
-									"",
-									"",
-									"// Need to check if the id matches the book's isbn + aisle",
-									"pm.test(\"ID matches the book's ISBN and aisle\", function () {",
-									"    const requestData = JSON.parse(pm.request.body.raw);",
-									"    const responseData = pm.response.json();",
-									"    const expectedID = `${requestData.isbn}${requestData.aisle}`;",
-									"    pm.expect(responseData.ID).to.equal(expectedID);",
-									"    });",
-									"",
 									""
 								],
 								"type": "text/javascript",
@@ -1108,14 +1091,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "// To add a new book:\n// name: Learn Appium Automation with Java\n// isbn: bcd\n// Aisle: 227\n// Author: John foe\n\n{\n    \"name\": \"Learn Appium Automation with Java\",\n    \"isbn\": \"bcd\",\n    \"aisle\": \"227\",\n    \"author\": \"John foe\"\n}\n\n// {\n//     \"name\": \"Fried Green Tomatoes at the Whistle Stop Cafe\",\n//     \"isbn\": \"0-394-56152-X\",\n//     \"aisle\": \"365\",\n//     \"author\": \"Fannie Flagg\"\n// }",
+							"raw": "{\n    \"ID\": \"0-394-56152-X365\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{base_url}}/Library/Addbook.php"
+						"url": "{{base_url}}/Library/DeleteBook.php"
 					},
 					"response": []
 				}
