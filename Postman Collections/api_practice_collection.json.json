@@ -973,7 +973,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/Library/GetBook.php?AuthorName=Johnfoe",
+							"raw": "{{base_url}}/Library/GetBook.php?AuthorName=FannieFlagg",
 							"host": [
 								"{{base_url}}"
 							],
@@ -984,7 +984,17 @@
 							"query": [
 								{
 									"key": "AuthorName",
-									"value": "Johnfoe"
+									"value": "Johnfoe",
+									"disabled": true
+								},
+								{
+									"key": "AuthorName",
+									"value": "rahulshetty",
+									"disabled": true
+								},
+								{
+									"key": "AuthorName",
+									"value": "FannieFlagg"
 								}
 							]
 						}
