@@ -836,75 +836,6 @@
 			"name": "Library - API",
 			"item": [
 				{
-					"name": "Add a new book",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "d618fbf5-5b32-4b5b-bd55-bc3585ff7f36",
-								"exec": [
-									"// Need to test that the status code = 200",
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"    });",
-									"",
-									"",
-									"// Need to confirm that the returned body contains 2 fields: Msg and ID",
-									"pm.test(\"Response body contains Msg and ID\", function () {",
-									"    pm.expect(pm.response.json()).to.have.property(\"Msg\");",
-									"    pm.expect(pm.response.json()).to.have.property(\"ID\");",
-									"    });",
-									"",
-									"",
-									"// Need to confirm that the Msg field contains the string \"successfully added\"",
-									"pm.test(\"Msg field contains 'successfully added'\", function () {",
-									"    pm.expect(pm.response.json().Msg).to.include(\"successfully added\");",
-									"    });",
-									"",
-									"",
-									"// Need to confirm that the ID field contains a string",
-									"pm.test(\"ID field is a string\", function () {",
-									"    pm.expect(pm.response.json().ID).to.be.a('string');",
-									"    });",
-									"",
-									"",
-									"// Need to check if the id matches the book's isbn + aisle",
-									"pm.test(\"ID matches the book's ISBN and aisle\", function () {",
-									"    const requestData = JSON.parse(pm.request.body.raw);",
-									"    const responseData = pm.response.json();",
-									"    const expectedID = `${requestData.isbn}${requestData.aisle}`;",
-									"    pm.expect(responseData.ID).to.equal(expectedID);",
-									"    });",
-									"",
-									""
-								],
-								"type": "text/javascript",
-								"packages": {},
-								"requests": {}
-							}
-						}
-					],
-					"id": "48667f3d-26c2-4e6d-8d93-46b9326ab805",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "// To add a new book:\n// name: Learn Appium Automation with Java\n// isbn: bcd\n// Aisle: 227\n// Author: John foe\n\n// {\n//     \"name\": \"Learn Appium Automation with Java\",\n//     \"isbn\": \"bcd\",\n//     \"aisle\": \"227\",\n//     \"author\": \"John foe\"\n// }\n\n{\n    \"name\": \"Fried Green Tomatoes at the Whistle Stop Cafe\",\n    \"isbn\": \"0-394-56152-X\",\n    \"aisle\": \"365\",\n    \"author\": \"Fannie Flagg\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{base_url}}/Library/Addbook.php"
-					},
-					"response": []
-				},
-				{
 					"name": "Search book by Author - Unsuccessful",
 					"id": "5e893e19-a2e6-4740-bc16-2b852f9581d3",
 					"protocolProfileBehavior": {
@@ -1063,6 +994,75 @@
 								}
 							]
 						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a new book",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d618fbf5-5b32-4b5b-bd55-bc3585ff7f36",
+								"exec": [
+									"// Need to test that the status code = 200",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"    });",
+									"",
+									"",
+									"// Need to confirm that the returned body contains 2 fields: Msg and ID",
+									"pm.test(\"Response body contains Msg and ID\", function () {",
+									"    pm.expect(pm.response.json()).to.have.property(\"Msg\");",
+									"    pm.expect(pm.response.json()).to.have.property(\"ID\");",
+									"    });",
+									"",
+									"",
+									"// Need to confirm that the Msg field contains the string \"successfully added\"",
+									"pm.test(\"Msg field contains 'successfully added'\", function () {",
+									"    pm.expect(pm.response.json().Msg).to.include(\"successfully added\");",
+									"    });",
+									"",
+									"",
+									"// Need to confirm that the ID field contains a string",
+									"pm.test(\"ID field is a string\", function () {",
+									"    pm.expect(pm.response.json().ID).to.be.a('string');",
+									"    });",
+									"",
+									"",
+									"// Need to check if the id matches the book's isbn + aisle",
+									"pm.test(\"ID matches the book's ISBN and aisle\", function () {",
+									"    const requestData = JSON.parse(pm.request.body.raw);",
+									"    const responseData = pm.response.json();",
+									"    const expectedID = `${requestData.isbn}${requestData.aisle}`;",
+									"    pm.expect(responseData.ID).to.equal(expectedID);",
+									"    });",
+									"",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"id": "48667f3d-26c2-4e6d-8d93-46b9326ab805",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "// To add a new book:\n// name: Learn Appium Automation with Java\n// isbn: bcd\n// Aisle: 227\n// Author: John foe\n\n// {\n//     \"name\": \"Learn Appium Automation with Java\",\n//     \"isbn\": \"bcd\",\n//     \"aisle\": \"227\",\n//     \"author\": \"John foe\"\n// }\n\n{\n    \"name\": \"Fried Green Tomatoes at the Whistle Stop Cafe\",\n    \"isbn\": \"0-394-56152-X\",\n    \"aisle\": \"365\",\n    \"author\": \"Fannie Flagg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/Library/Addbook.php"
 					},
 					"response": []
 				},
