@@ -1042,7 +1042,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/Library/GetBook.php?ID=bcd227",
+							"raw": "{{base_url}}/Library/GetBook.php?isbn=RGHCC",
 							"host": [
 								"{{base_url}}"
 							],
@@ -1053,7 +1053,13 @@
 							"query": [
 								{
 									"key": "ID",
-									"value": "bcd227"
+									"value": "bcd227",
+									"disabled": true
+								},
+								{
+									"key": "isbn",
+									"value": "RGHCC",
+									"type": "text"
 								}
 							]
 						}
