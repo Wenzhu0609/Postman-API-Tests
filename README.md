@@ -1,6 +1,12 @@
 # Postman API Testing Project
 
-This repository contains practical API testing exercises built with Postman to strengthen software QA skills in request validation, response verification, and test logic.
+This repository contains curated API testing scenarios built with Postman, including functional validation, negative testing, authentication checks, CRUD operations, and response performance validation.
+
+## Collections Included
+
+* ReqRes API Functional Tests
+* Library API Functional Tests
+* Basic Response Validation Tests
 
 ## Testing Coverage
 
@@ -22,8 +28,14 @@ This repository contains practical API testing exercises built with Postman to s
 * Verify response status equals expected code
 * Validate response time threshold
 * Check required response fields
-* Confirm authentication behavior
+* Verify authentication behaviour
+
+## Sample Test Assertion
+
+pm.test("Response status is 200", function () {
+pm.response.to.have.status(200);
+});
 
 ## Purpose
 
-This project reflects hands-on QA learning focused on API testing principles used in junior software testing roles.
+This project reflects hands-on QA practice focused on API validation, functional testing, and response analysis aligned with junior software testing responsibilities.
