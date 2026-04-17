@@ -10,7 +10,7 @@
 			"name": "Basic Response Validation Tests",
 			"item": [
 				{
-					"name": "Get Google Homepage",
+					"name": "Homepage Response - Status 200",
 					"event": [
 						{
 							"listen": "test",
@@ -170,7 +170,7 @@
 					"response": []
 				},
 				{
-					"name": "List <source>",
+					"name": "Resource List - Success",
 					"event": [
 						{
 							"listen": "test",
@@ -199,7 +199,7 @@
 					"response": []
 				},
 				{
-					"name": "List single item id 5",
+					"name": "Resource by ID 5 - Success",
 					"event": [
 						{
 							"listen": "test",
@@ -232,7 +232,7 @@
 					"response": []
 				},
 				{
-					"name": "Single <resource> not found",
+					"name": "Resource by Invalid ID - Not Found",
 					"event": [
 						{
 							"listen": "test",
@@ -261,7 +261,7 @@
 					"response": []
 				},
 				{
-					"name": "Delete Data from List Resource",
+					"name": "Delete Resource - Success",
 					"event": [
 						{
 							"listen": "test",
@@ -333,7 +333,7 @@
 					"response": []
 				},
 				{
-					"name": "Update user id 3",
+					"name": "Update User by ID 3 - Success",
 					"event": [
 						{
 							"listen": "test",
@@ -376,7 +376,7 @@
 					"response": []
 				},
 				{
-					"name": "Update user id 3",
+					"name": "Partial Update User by ID 3 - Success",
 					"event": [
 						{
 							"listen": "test",
@@ -460,7 +460,7 @@
 					"response": []
 				},
 				{
-					"name": "Confirm deletion of user id 6",
+					"name": "Verify User Deletion - Not Found",
 					"event": [
 						{
 							"listen": "test",
@@ -914,7 +914,7 @@
 					"response": []
 				},
 				{
-					"name": "Search book by ID - Successful",
+					"name": "Search Book by ID - Success",
 					"event": [
 						{
 							"listen": "test",
