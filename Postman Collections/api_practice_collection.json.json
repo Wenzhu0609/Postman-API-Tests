@@ -102,7 +102,7 @@
 					"response": []
 				},
 				{
-					"name": "GET User by ID 3 - Success",
+					"name": "User by ID 3 - Success",
 					"event": [
 						{
 							"listen": "test",
@@ -141,7 +141,7 @@
 					"response": []
 				},
 				{
-					"name": "Single user not found",
+					"name": "User by Invalid ID - Not Found",
 					"event": [
 						{
 							"listen": "test",
@@ -290,7 +290,7 @@
 					"response": []
 				},
 				{
-					"name": "Create new user id 13",
+					"name": "Create User - Success",
 					"event": [
 						{
 							"listen": "test",
@@ -422,7 +422,7 @@
 					"response": []
 				},
 				{
-					"name": "Delete user id 6",
+					"name": "User by ID 6 - Success",
 					"event": [
 						{
 							"listen": "test",
@@ -496,7 +496,7 @@
 					"response": []
 				},
 				{
-					"name": "Register - New account - successful",
+					"name": "Register - New account - success",
 					"event": [
 						{
 							"listen": "test",
@@ -557,7 +557,7 @@
 					"response": []
 				},
 				{
-					"name": "Register - New account - unsuccessful",
+					"name": "Register - New account - unsuccess",
 					"event": [
 						{
 							"listen": "test",
@@ -602,7 +602,7 @@
 					"response": []
 				},
 				{
-					"name": "Login - Unsuccessful",
+					"name": "Login - Unsuccess",
 					"event": [
 						{
 							"listen": "test",
@@ -651,7 +651,7 @@
 					"response": []
 				},
 				{
-					"name": "Login - Successful",
+					"name": "Login - Success",
 					"event": [
 						{
 							"listen": "test",
@@ -709,7 +709,7 @@
 					"response": []
 				},
 				{
-					"name": "Delayed Response",
+					"name": "Delayed Response - Performance Check",
 					"event": [
 						{
 							"listen": "test",
@@ -817,7 +817,7 @@
 			"name": "Library API Functional Tests",
 			"item": [
 				{
-					"name": "Search book by Author - Unsuccessful",
+					"name": "Search book by Author - Unsuccess",
 					"id": "5e893e19-a2e6-4740-bc16-2b852f9581d3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -845,7 +845,7 @@
 					"response": []
 				},
 				{
-					"name": "Search book by Author - Successful",
+					"name": "Search book by Author - Success",
 					"event": [
 						{
 							"listen": "test",
@@ -984,7 +984,7 @@
 					"response": []
 				},
 				{
-					"name": "Add a new book",
+					"name": "Add new book - Success",
 					"event": [
 						{
 							"listen": "test",
@@ -1053,7 +1053,7 @@
 					"response": []
 				},
 				{
-					"name": "Delete a book",
+					"name": "Book by ID - Success",
 					"event": [
 						{
 							"listen": "test",
@@ -1089,7 +1089,7 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "POST",
+						"method": "DELETE",
 						"header": [],
 						"body": {
 							"mode": "raw",
