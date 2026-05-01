@@ -45,9 +45,9 @@
 							}
 						],
 						"url": {
-							"raw": "{{base_url}}/api/users?page=1",
+							"raw": "{{reqres_base_url}}/api/users?page=1",
 							"host": [
-								"{{base_url}}"
+								"{{reqres_base_url}}"
 							],
 							"path": [
 								"api",
@@ -98,7 +98,7 @@
 								"type": "text"
 							}
 						],
-						"url": "{{base_url}}/api/users/3"
+						"url": "{{reqres_base_url}}/api/users/3"
 					},
 					"response": []
 				},
@@ -156,7 +156,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{base_url}}/api/unknown"
+						"url": "{{reqres_base_url}}/api/unknown"
 					},
 					"response": []
 				},
@@ -189,7 +189,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{base_url}}/api/unknown/5"
+						"url": "{{reqres_base_url}}/api/unknown/5"
 					},
 					"response": []
 				},
@@ -218,7 +218,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{base_url}}/api/unknown/15"
+						"url": "{{reqres_base_url}}/api/unknown/15"
 					},
 					"response": []
 				},
@@ -247,7 +247,7 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": "{{base_url}}/api/unknown/5"
+						"url": "{{reqres_base_url}}/api/unknown/5"
 					},
 					"response": []
 				},
@@ -290,7 +290,7 @@
 								}
 							}
 						},
-						"url": "{{base_url}}/api/users/13"
+						"url": "{{reqres_base_url}}/api/users/13"
 					},
 					"response": []
 				},
@@ -795,9 +795,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/Library/GetBook.php?AuthorName=idonotexist",
+							"raw": "{{library_base_url}}/Library/GetBook.php?AuthorName=idonotexist",
 							"host": [
-								"{{base_url}}"
+								"{{library_base_url}}"
 							],
 							"path": [
 								"Library",
