@@ -304,10 +304,10 @@
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
 									"});",
-									"pm.test(\"User firstname and lastname updated to Brad Pit\", function () {",
+									"pm.test(\"User first name and lastname are updated\", function () {",
 									"    const jsonData = pm.response.json();",
-									"    pm.expect(jsonData.first_name).to.eql(\"Brad\");",
-									"    pm.expect(jsonData.last_name).to.eql(\"Pit\");",
+									"    pm.expect(jsonData.first_name).to.eql(\"Updated\");",
+									"    pm.expect(jsonData.last_name).to.eql(\"User\");",
 									"});"
 								],
 								"type": "text/javascript",
@@ -347,10 +347,10 @@
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
 									"});",
-									"pm.test(\"User firstname and lastname updated to Brad Pit\", function () {",
+									"pm.test(\"User first name and last name are updated\", function () {",
 									"    const jsonData = pm.response.json();",
-									"    pm.expect(jsonData.first_name).to.eql(\"Brad\");",
-									"    pm.expect(jsonData.last_name).to.eql(\"Pit\");",
+									"    pm.expect(jsonData.first_name).to.eql(\"Updated\");",
+									"    pm.expect(jsonData.last_name).to.eql(\"User\");",
 									"    pm.expect(jsonData).to.have.property('updatedAt');",
 									"",
 									"});",
@@ -371,7 +371,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"first_name\": \"Brad\",\n  \"last_name\": \"Pit\"\n}",
+							"raw": "{\n  \"first_name\": \"Updated\",\n  \"last_name\": \"User\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
