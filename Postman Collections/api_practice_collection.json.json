@@ -15,11 +15,14 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "731321b8-7318-4913-959d-cd258a5f6e4f",
+								"id": "7bcdf75b-aa7e-4183-abe5-d0baab5b64f8",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
-									"    });"
+									"    });",
+									"",
+									"",
+									""
 								],
 								"type": "text/javascript",
 								"packages": {},
@@ -597,7 +600,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "//using different email address than what's given by the platform\n//still able to successfully login with wrong password, seems like a bug to me\n{\n    \"email\": \"selina.holt@reqres.in\",\n    \"password\": \"cityslicka\"\n}",
+							"raw": "//using different email address than what's given by the platform\n//still able to successfully login with wrong password, seems like a bug to me\n{\"email\": \"selina.holt@reqres.in\", \"password\": \"cityslicka\"}\n",
 							"options": {
 								"raw": {
 									"language": "json"
