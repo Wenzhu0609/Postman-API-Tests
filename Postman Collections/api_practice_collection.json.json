@@ -40,7 +40,8 @@
 							{
 								"key": "x-api-key",
 								"value": "{{api_key}}",
-								"type": "text"
+								"type": "text",
+								"disabled": true
 							}
 						],
 						"url": {
@@ -740,6 +741,8 @@
 			"auth": {
 				"type": "apikey",
 				"apikey": {
+					"key": "x-api-key",
+					"value": "{{api_key}}",
 					"in": "header"
 				}
 			},
@@ -747,7 +750,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "9eb95072-9179-4ab7-af54-b1d6f583b519",
+						"id": "f69dbe6e-806f-4dd2-94fc-b73212835c1a",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
@@ -759,7 +762,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "b781fa1d-6341-4d68-a2d9-6c6eba405f8b",
+						"id": "5651e4c8-293e-471f-9ab0-c3ab39448293",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
