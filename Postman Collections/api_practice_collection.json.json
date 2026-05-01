@@ -737,11 +737,17 @@
 				}
 			],
 			"id": "4d230f34-a5bc-4e76-805f-b9986c927439",
+			"auth": {
+				"type": "apikey",
+				"apikey": {
+					"in": "header"
+				}
+			},
 			"event": [
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "102d5927-9914-44ba-8b21-6ed3aaa63c10",
+						"id": "9eb95072-9179-4ab7-af54-b1d6f583b519",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
@@ -753,7 +759,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "84e5ac50-b211-4342-bfe5-9c017b14c043",
+						"id": "b781fa1d-6341-4d68-a2d9-6c6eba405f8b",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
