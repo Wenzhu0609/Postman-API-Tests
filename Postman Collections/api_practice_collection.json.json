@@ -325,7 +325,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "//to update with PUT request, need to send the entire user object, otherwise the server might assume to leave the email and avatar blank if not included in the body\n\n{\n    \"email\": \"emma.wong@reqres.in\",\n    \"first_name\": \"Brad\",\n    \"last_name\": \"Pit\",\n    \"avatar\": \"https://reqres.in/img/faces/3-image.jpg\"\n}",
+							"raw": "{\n    \"email\": \"emma.wong@reqres.in\",\n    \"first_name\": \"Brad\",\n    \"last_name\": \"Pit\",\n    \"avatar\": \"https://reqres.in/img/faces/3-image.jpg\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -506,7 +506,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "//Only defined users succeed registration. Use info provided by the platform\n{\"email\": \"eve.holt@reqres.in\", \"password\": \"pistol\"}",
+							"raw": "{\"email\": \"eve.holt@reqres.in\", \"password\": \"pistol\"}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -551,7 +551,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "//any email works, just don't add the password section\n{\n    \"email\": \"xydney@fife\"\n}",
+							"raw": "{\n    \"email\": \"xydney@fife\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -600,7 +600,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "//using different email address than what's given by the platform\n//still able to successfully login with wrong password, seems like a bug to me\n{\"email\": \"selina.holt@reqres.in\", \"password\": \"cityslicka\"}\n",
+							"raw": "{\"email\": \"selina.holt@reqres.in\", \"password\": \"cityslicka\"}\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -697,8 +697,7 @@
 							"script": {
 								"id": "619cf1be-bb0b-4c1c-a628-88b998958f72",
 								"exec": [
-									"pm.variables.set(\"skip_time_test\", true);",
-									""
+									"pm.variables.set(\"skip_time_test\", true);"
 								],
 								"type": "text/javascript",
 								"packages": {},
@@ -1002,7 +1001,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "// To add a new book:\n// name: Learn Appium Automation with Java\n// isbn: bcd\n// Aisle: 227\n// Author: John foe\n\n// {\n//     \"name\": \"Learn Appium Automation with Java\",\n//     \"isbn\": \"bcd\",\n//     \"aisle\": \"227\",\n//     \"author\": \"John foe\"\n// }\n\n{\n    \"name\": \"Fried Green Tomatoes at the Whistle Stop Cafe\",\n    \"isbn\": \"0-394-56152-X\",\n    \"aisle\": \"365\",\n    \"author\": \"Fannie Flagg\"\n}",
+							"raw": "// {\n//     \"name\": \"Learn Appium Automation with Java\",\n//     \"isbn\": \"bcd\",\n//     \"aisle\": \"227\",\n//     \"author\": \"John foe\"\n// }\n\n{\n    \"name\": \"Fried Green Tomatoes at the Whistle Stop Cafe\",\n    \"isbn\": \"0-394-56152-X\",\n    \"aisle\": \"365\",\n    \"author\": \"Fannie Flagg\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
