@@ -262,9 +262,9 @@
 									"    pm.response.to.have.status(201);",
 									"    });",
 									"",
-									"pm.test(\"New user Angelina Jully is added\", function() {",
-									"    pm.expect(pm.response.json().first_name).to.eql(\"Angelina\");",
-									"    pm.expect(pm.response.json().last_name).to.eql(\"Jully\");",
+									"pm.test(\"New user John Reese is added\", function() {",
+									"    pm.expect(pm.response.json().first_name).to.eql(\"John\");",
+									"    pm.expect(pm.response.json().last_name).to.eql(\"Reese\");",
 									"})"
 								],
 								"type": "text/javascript",
@@ -282,7 +282,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"first_name\": \"Angelina\",\n\"last_name\": \"Jully\"}",
+							"raw": "{\"first_name\": \"John\",\n\"last_name\": \"Reese\"}",
 							"options": {
 								"raw": {
 									"language": "json"
