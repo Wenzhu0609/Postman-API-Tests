@@ -258,7 +258,7 @@
 							"script": {
 								"id": "a64d39fa-128f-4259-bcb3-bed5d544bd05",
 								"exec": [
-									"pm.test(\"Stuts Code is 201\", function () {",
+									"pm.test(\"Status Code is 201\", function () {",
 									"    pm.response.to.have.status(201);",
 									"    });",
 									"",
@@ -383,7 +383,7 @@
 					"response": []
 				},
 				{
-					"name": "User by ID 6 - Success",
+					"name": "Delete User by ID 6 - Success",
 					"event": [
 						{
 							"listen": "test",
@@ -430,7 +430,7 @@
 								"exec": [
 									"//test response status code to be eigher 404 or 410",
 									"pm.test(\"Status code is 404 or 410\", function () {",
-									"    pm.response.to.have.status(404 || 410);",
+									"    pm.expect(pm.response.code).to.be.oneOf([404, 410]);",
 									"    });"
 								],
 								"type": "text/javascript",
@@ -518,7 +518,7 @@
 					"response": []
 				},
 				{
-					"name": "Register - New account - unsuccess",
+					"name": "Register - Missing Password - Failure",
 					"event": [
 						{
 							"listen": "test",
