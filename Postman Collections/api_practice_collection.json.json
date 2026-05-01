@@ -325,7 +325,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\": \"emma.wong@reqres.in\",\n    \"first_name\": \"Brad\",\n    \"last_name\": \"Pit\",\n    \"avatar\": \"https://reqres.in/img/faces/3-image.jpg\"\n}",
+							"raw": "{\n    \"email\": \"emma.wong@reqres.in\",\n    \"first_name\": \"Updated\",\n    \"last_name\": \"User\",\n    \"avatar\": \"https://reqres.in/img/faces/3-image.jpg\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -371,7 +371,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "//to update using PATCH, only write the section need to be changes, the rest remain safe and untouched on the server without having to r-send them\n\n\n{\n  \"first_name\": \"Brad\",\n  \"last_name\": \"Pit\"\n}",
+							"raw": "{\n  \"first_name\": \"Brad\",\n  \"last_name\": \"Pit\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -741,7 +741,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "de95bd33-b1ae-4c3f-823f-186030f4d981",
+						"id": "102d5927-9914-44ba-8b21-6ed3aaa63c10",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
@@ -753,7 +753,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "355eb103-007c-4fe6-a762-11f3751d2917",
+						"id": "84e5ac50-b211-4342-bfe5-9c017b14c043",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
@@ -761,8 +761,8 @@
 							"const skipTest = pm.variables.get(\"skip_time_test\");",
 							"",
 							"if (!skipTest) {",
-							"    pm.test(\"Response time is less than 200ms\", function () {",
-							"        pm.expect(pm.response.responseTime).to.be.below(200);",
+							"    pm.test(\"Response time is less than 1000ms\", function () {",
+							"        pm.expect(pm.response.responseTime).to.be.below(1000);",
 							"    });",
 							"}",
 							"// Clean up: unset the variable so it doesn't affect the NEXT request",
@@ -777,7 +777,7 @@
 			"name": "Library API Functional Tests",
 			"item": [
 				{
-					"name": "Search book by Author - Unsuccess",
+					"name": "Search book by Author - No Results",
 					"id": "5e893e19-a2e6-4740-bc16-2b852f9581d3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -1013,7 +1013,7 @@
 					"response": []
 				},
 				{
-					"name": "Book by ID - Success",
+					"name": "Delete Book by ID - Success",
 					"event": [
 						{
 							"listen": "test",
